@@ -1,0 +1,50 @@
+.tabuleiro{
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+#piece-1{
+    width: 60px;
+    height: 60px;
+    background-color: #eeeed5;
+}
+
+#piece-2{
+    width: 60px;
+    height: 60px;
+    background-color: #7d945d;
+}
+
+#piece-2 img{
+    width: 60px;
+    height: 60px;
+}
+
+#cavalo{
+    width: 60px;
+    height: 60px;
+    background-image: url(../imgs/horse.png);
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    animation: passeioCavalo 10s;
+    z-index: 1;
+}
+
+@keyframes passeioCavalo{
+    /*translate(left,top)*/
+    0%{transform: translate(0,0);}
+    8%{transform: translate(0,120px);}
+    16%{transform: translate(120px,120px);}
+    24%{transform: translate(120px,240px);}
+    32%{transform: translate(180px,240px);}
+    40%{transform: translate(180px,360px);}
+    48%{transform: translate(300px,360px);}
+    56%{transform: translate(300px,420px);} /*Fim da ida*/
+    64%{transform: translate(180px,420px);}
+    72%{transform: translate(180px,240px);}
+    80%{transform: translate(60px,240px);}
+    88%{transform: translate(60px,120px);}
+    96%{transform: translate(0px,120px);}
+    100%{transform: translate(0,0);}
+}
